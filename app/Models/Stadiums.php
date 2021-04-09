@@ -7,5 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Stadiums extends Model
 {
-    use HasFactory;
+    // use HasFactory;
+
+    protected $table = 'stadiums';
+    protected $fillable = [
+        'name',
+        'capacity',
+        'address',
+        'created_at',
+        'updated_at'
+    ];
 }

@@ -7,5 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Players extends Model
 {
-    use HasFactory;
+
+    // use HasFactory;
+
+    protected $table = 'players';
+    protected $fillable = [
+        'clubs_id',
+        'name',
+        'photo',
+        'height',
+        'position',
+        'created_at',
+        'updated_at'
+    ];
 }
