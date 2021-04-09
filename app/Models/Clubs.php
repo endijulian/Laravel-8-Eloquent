@@ -38,11 +38,11 @@ class Clubs extends Model
 
     public function match_clubs()
     {
-        return $this->hasOne('App\Models\Clubs', 'clubs_id');
+        return $this->hasOne('App\Models\Matches', 'clubs_id');
     }
 
-    public function rivals_clubs()
+    public function match_rivals()
     {
-        return $this->hasOne('App\Models\Clubs', 'rivals_id');
+        return $this->hasOne('App\Models\Matches', 'clubs_id');
     }
 }
