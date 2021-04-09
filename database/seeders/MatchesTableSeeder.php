@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use App\Models\Matches;
 
 class MatchesTableSeeder extends Seeder
 {
@@ -13,6 +15,52 @@ class MatchesTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('matches')->truncate();
+        $matches = [
+            [
+                'clubs_id'      => 1,
+                'rivals_id'     => 2,
+                'schedule'      => '2021-08-25 00:00:00',
+                'created_at'    => '2021-03-21 00:00:00',
+                'updated_at'    => '2021-03-21 00:00:00',
+            ],
+            [
+                'clubs_id'      => 2,
+                'rivals_id'     => 1,
+                'schedule'      => '2021-08-25 00:00:00',
+                'created_at'    => '2021-03-21 00:00:00',
+                'updated_at'    => '2021-03-21 00:00:00',
+            ],
+            [
+                'clubs_id'      => 3,
+                'rivals_id'     => 4,
+                'schedule'      => '2021-08-25 00:00:00',
+                'created_at'    => '2021-03-21 00:00:00',
+                'updated_at'    => '2021-03-21 00:00:00',
+            ],
+            [
+                'clubs_id'      => 4,
+                'rivals_id'     => 3,
+                'schedule'      => '2021-08-25 00:00:00',
+                'created_at'    => '2021-03-21 00:00:00',
+                'updated_at'    => '2021-03-21 00:00:00',
+            ],
+            [
+                'clubs_id'      => 5,
+                'rivals_id'     => 6,
+                'schedule'      => '2021-08-25 00:00:00',
+                'created_at'    => '2021-03-21 00:00:00',
+                'updated_at'    => '2021-03-21 00:00:00',
+            ],
+            [
+                'clubs_id'      => 6,
+                'rivals_id'     => 5,
+                'schedule'      => '2021-08-25 00:00:00',
+                'created_at'    => '2021-03-21 00:00:00',
+                'updated_at'    => '2021-03-21 00:00:00',
+            ],
+        ];
+
+        Matches::insert($matches);
     }
 }
