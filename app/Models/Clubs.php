@@ -19,4 +19,30 @@ class Clubs extends Model
         'created_at',
         'updated_at'
     ];
+
+    public function stadiums()
+    {
+        return $this->belongsTo('App\Models\Stadiums', 'stadiums_id', 'id');
+    }
+
+
+    public function managers()
+    {
+        return $this->hasMany('App\Models\Managers', 'clubs_id');
+    }
+
+    public function players()
+    {
+        return $this->hasMany('App\Models\Players', 'clubs_id');
+    }
+
+    public function match_clubs()
+    {
+        return $this->hasOne('App\Models\Clubs', 'clubs_id');
+    }
+
+    public function rivals_clubs()
+    {
+        return $this->hasOne('App\Models\Clubs', 'rivals_id');
+    }
 }

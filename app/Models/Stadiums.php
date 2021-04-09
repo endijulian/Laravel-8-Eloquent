@@ -17,4 +17,9 @@ class Stadiums extends Model
         'created_at',
         'updated_at'
     ];
+
+    public function clubs()
+    {
+        return $this->hasOne('App\Models\Clubs', 'stadiums_id');
+    }
 }
