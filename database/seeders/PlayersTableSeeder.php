@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 use App\Models\Players;
 
 class PlayersTableSeeder extends Seeder
@@ -15,8 +14,6 @@ class PlayersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('players')->truncate();
-
         $players = [
             [
                 'clubs_id'      => 1,

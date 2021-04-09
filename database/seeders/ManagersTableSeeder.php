@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 use App\Models\Managers;
 
 class ManagersTableSeeder extends Seeder
@@ -15,8 +14,6 @@ class ManagersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('managers')->truncate();
-
         $managers = [
             [
                 'clubs_id'      => 1,

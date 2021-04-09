@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Stadiums;
-use Illuminate\Support\Facades\DB;
 
 class StadiumsTableSeeder extends Seeder
 {
@@ -15,8 +14,6 @@ class StadiumsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('stadiums')->truncate();
-
         $stadiums = [
             [
                 'name' => 'Stamford Bridge',
@@ -62,6 +59,6 @@ class StadiumsTableSeeder extends Seeder
             ]
         ];
 
-        Stadiums::create($stadiums);
+        Stadiums::insert($stadiums);
     }
 }

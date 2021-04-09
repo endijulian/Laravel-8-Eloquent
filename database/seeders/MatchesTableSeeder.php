@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 use App\Models\Matches;
 
 class MatchesTableSeeder extends Seeder
@@ -15,7 +14,6 @@ class MatchesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('matches')->truncate();
         $matches = [
             [
                 'clubs_id'      => 1,
